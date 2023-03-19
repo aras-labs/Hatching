@@ -1,0 +1,9 @@
+opencv-python
+pixellib
+numpy
+matplotlib
+shapely
+svgwrite
+tensorflow==2.6.0
+keras==2.6.0
+flask
