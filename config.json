@@ -1,0 +1,15 @@
+{
+    "width": 710,
+    "height": 950,
+    "x_offset": 110,
+    "y_offset": 210,
+    "page_width": 490,
+    "page_height": 750,
+    "margin": 50,
+    "home_l1": 534.2,
+    "home_l2": 520.7,
+    "max_segment_length": 2,
+    "pen_width": 1.0,
+    "motor_speed": 1000.0,
+    "motor_accel": 400.0
+}
