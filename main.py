@@ -19,7 +19,7 @@ def convert(file_name, output_path, params):
 
     
     if params["image_scale"] == 'auto':
-        params["image_scale"] = 900 / max(img.shape[0], img.shape[1])
+        params["image_scale"] = 800 / max(img.shape[0], img.shape[1])
 
     scale_x = int(img.shape[1] * float(params["image_scale"]))
     scale_y = int(img.shape[0] * float(params["image_scale"]))
