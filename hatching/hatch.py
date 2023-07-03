@@ -248,8 +248,6 @@ def _save_gcode(file_path: str, config, coords):
 def _load_image(
     file_path: Union[str, np.ndarray],
     blur_radius: int = 10,
-    image_scale: float = 1.0,
-    interpolation: int = cv2.INTER_LINEAR,
     h_mirror: bool = False,
     invert: bool = False,
 ) -> np.ndarray:
@@ -258,9 +256,7 @@ def _load_image(
         img = cv2.imread(file_path, cv2.IMREAD_GRAYSCALE)
     else:
         img = file_path
-    scale_x = int(img.shape[1] * image_scale)
-    scale_y = int(img.shape[0] * image_scale)
-    img = cv2.resize(img, (scale_x, scale_y), interpolation=interpolation)
+    
     if blur_radius > 0:
         img = cv2.blur(img, (blur_radius, blur_radius))
 
@@ -362,8 +358,6 @@ def hatch(
     hatch_pitch: float = 5,
     levels: Union[int, Tuple[int, ...]] = (64, 128, 192), # 'auto'
     blur_radius: int = 10,
-    image_scale: float = 1.0,
-    interpolation: int = cv2.INTER_LINEAR,
     arrange: bool = True,
     h_mirror: bool = False,
     invert: bool = False,
@@ -378,8 +372,6 @@ def hatch(
     img = _load_image(
         file_path=file_path,
         blur_radius=blur_radius,
-        image_scale=image_scale,
-        interpolation=interpolation,
         h_mirror=h_mirror,
         invert=invert,
     )
