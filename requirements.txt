@@ -5,5 +5,5 @@ matplotlib
 shapely
 svgwrite
 tensorflow==2.6.0
-keras==2.6.0
+keras==2.13.1
 flask
